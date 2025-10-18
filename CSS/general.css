@@ -1,0 +1,83 @@
+html {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: clamp(14px, 1.5vw, 18px);
+ height: 100%;
+ margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+.logo {
+ background-image:url(/assets/images/logo-blue-no-figure.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+ width: 12vmin;
+ height: 12vmin;
+ padding-left: 10vmin;
+}
+.title {
+  text-align: center;
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin: 2vmin 0;
+}
+
+nav {
+ background-color: #8C1113;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0.5vmin 2vw;
+ flex-wrap: wrap; 
+}
+
+.navigation {
+ display: flex;
+ list-style: none;
+ margin-top: 1vmin;
+ margin-left: 1vmin;
+ gap: 2vw;
+}
+
+.navigation li {
+ color: white;
+ padding: 0.5vmin;
+ font-size: clamp(1.3rem, 1.5vw, 1rem);
+
+}
+
+.about a {
+ color: white;
+ text-decoration: none;
+}
+
+.home a {
+ color: white;
+ text-decoration: none;
+}
+
+.contact a {
+ color: white;
+ text-decoration: none;
+}
+
+.shop a {
+ color: white;
+ text-decoration: none;
+}
+
+footer {
+ background-image:url(/assets/images/logo-blue.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-color: #2a4F4A;
+ color: white;
+ text-align: center;
+ padding: 2vmin;
+ font-size: clamp(0.8rem, 1.5vw, 1rem);
+ margin-top: auto;
+}

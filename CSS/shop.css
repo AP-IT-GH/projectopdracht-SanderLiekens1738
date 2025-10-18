@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pagelayout {
+  display: flex;
+  flex: 1; 
+  min-height: 0;
+}
+
+p{
+    font-size: clamp(5px, 9px, 20px);
+}
+
+h3,h2{
+    color: white;
+}
+
+h3{
+    font-size: clamp(0.3rem,1.6rem, 2.3rem);
+    color:white;
+    text-decoration: underline;
+    align-content: center;
+    text-decoration-color: red;
+    padding-left: 1vmin;
+}
+
+h2{
+    font-size: 10vmin;
+    font-style: italic;
+}
+
+article{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+article a{
+      display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.productgrid {
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vmin, 2fr));
+    gap: 7rem;
+    flex: 1;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.maincontent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #4F5AFF;
+    padding: 2vmin;
+    box-sizing: border-box;
+}
+
+.overlay{
+    margin: 0;
+    padding-bottom:10px;
+    width: 10rem;
+    height: 1rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 0.4rem;
+    color: white;
+}
+
+.astronaut,.duck, .fox,.dragon,.firemonkey,.raindropmonkey,.sushichef,.turtle {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    margin-top: clamp(1.2rem,6.4rem, 12rem);
+}
+
+.astronaut {
+    background-image: url(/assets/images/transparant-astronaut.png);
+}
+
+.duck {
+    background-image: url(/assets/images/transparant-swedish-duck.png);
+}
+
+.gorilla {
+    background-image: url(/assets/images/transparant-office-gorilla.png);
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    margin-top: clamp(1.2rem, 6.4rem, 8rem);
+    background-size: cover;
+    background-position: center;
+}
+
+.dragon {
+    background-image: url(/assets/images/transparant-dragon.png);
+}
+
+.firemonkey {
+    background-image: url(/assets/images/transparant-fire-monkey.png);
+}
+
+.raindropmonkey{
+    background-image: url(/assets/images/transparant-water-monkey.png);   
+}
+
+.fox {
+    background-image: url(/assets/images/transparant-fox.png);
+}
+.sushichef {
+    background-image: url(/assets/images/transparant-sushi-chef.png);
+}
+
+.turtle {
+    background-image: url(/assets/images/transparant-weak-turtle.png);  
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    width: 9rem;
+    background-color: #7092BE;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.wavingman {
+    background-image: url(/assets/images/transparant-zwaaiende-astronaut.png);
+    background-size: cover;
+    background-position: center;
+    animation-direction: alternate;
+    width: 40vmin;
+    height: 40vmin;
+    position: absolute;
+    top: 60vmin;
+    right: -15vmin;
+    animation: wavingman 1.5s ease-out forwards;
+}
+
+@keyframes wavingman {
+  0% {
+    transform: translateX(100%) rotate(30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%) rotate(0deg);
+    opacity: 1;
+  }
+}
