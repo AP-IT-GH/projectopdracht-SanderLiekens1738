@@ -146,19 +146,19 @@ h1 {
 }
 
 .duck {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-swedish-duck.png);
+  background-image: url(/assets/images/transparant-swedish-duck.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .gorilla {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-office-gorilla.png);
+  background-image: url(/assets/images/transparant-office-gorilla.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .fox {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-fox.png);
+  background-image: url(/assets/images/transparant-fox.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -212,7 +212,7 @@ button:hover,
 }
 
 .portret {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/portret-foto.png);
+  background-image: url(/assets/images/portret-foto.png);
   background-size: cover;
   background-position: center;
   width: 20vmin;

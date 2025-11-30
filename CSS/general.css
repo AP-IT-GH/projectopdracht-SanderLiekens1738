@@ -87,7 +87,7 @@ header {
 }
 
 footer {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/logo-blue.png);
+  background-image: url(/assets/images/logo-blue.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--footer-background);

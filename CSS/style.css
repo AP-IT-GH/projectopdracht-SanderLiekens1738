@@ -143,16 +143,16 @@ aside div {
 }
 
 .astronaut {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-astronaut.png);
+  background-image: url(/assets/images/transparant-astronaut.png);
 }
 
 .duck {
   height: 50px;
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-swedish-duck.png);
+  background-image: url(/assets/images/transparant-swedish-duck.png);
 }
 
 .gorilla {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-office-gorilla.png);
+  background-image: url(/assets/images/transparant-office-gorilla.png);
   position: absolute;
   width: clamp(75%, 20vw, 75%);
   height: clamp(75%, 20vw, 75%);
@@ -166,27 +166,27 @@ aside div {
 }
 
 .dragon {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-dragon.png);
+  background-image: url(/assets/images/transparant-dragon.png);
 }
 
 .firemonkey {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-fire-monkey.png);
+  background-image: url(/assets/images/transparant-fire-monkey.png);
 }
 
 .raindropmonkey {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-water-monkey.png);
+  background-image: url(/assets/images/transparant-water-monkey.png);
 }
 
 .fox {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-fox.png);
+  background-image: url(/assets/images/transparant-fox.png);
 }
 
 .sushichef {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-sushi-chef.png);
+  background-image: url(/assets/images/transparant-sushi-chef.png);
 }
 
 .turtle {
-  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-weak-turtle.png);
+  background-image: url(/assets/images/transparant-weak-turtle.png);
 }
 
 .logo {
