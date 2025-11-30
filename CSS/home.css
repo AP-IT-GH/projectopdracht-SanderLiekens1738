@@ -1,38 +1,58 @@
+:root {
+  --main-red: #8c1113;
+  --section-blue: #7092BE;
+  --footer-green: #2a4F4A;
+  --highlight-purple: #4F5AFF;
+  --text-white: white;
+  --main-font: Arial, Helvetica, sans-serif;
+}
+
 html {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-family: var(--main-font);
+  font-size: clamp(1rem, 0.5vw, 2rem);
 }
 
 body {
   margin: 0;
-  background-color: #8c1113;
+  background-color: var(--section-blue);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-
-
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
 /* Logo */
+
 .logo {
-  background-image:url(/assets/images/logo-blue-no-figure.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 12vmin;
-  height: 12vmin;
-  padding-left: 10vmin;
+  width: 7vmin;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1vw;
 }
 
 /* Navigation */
-nav {
-  background-color: #8C1113;
+header {
+  background-color: var(--main-red);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5vmin 2vw;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .navigation {
   display: flex;
   list-style: none;
@@ -41,55 +61,67 @@ nav {
   gap: 2vw;
 }
 
-.navigation li {
-  font-size: clamp(1.3rem, 15vw, 1rem);
-  color: white;
+.navigation a {
+  font-size: clamp(1rem, 1.5vw, 2rem);  
+  color: var(--text-white);
   padding: 0.5vmin;
+  display: block; 
 }
 
 .about a {
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
 }
+
 .home a {
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
 }
+
 .contact a {
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
 }
+
 .shop a {
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
 }
-/* Section */
+
 section {
-  background-color: #7092BE;
+  background-color: var(--section-blue);
   padding: 2vmin;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: #4F5AFF;
-  margin-bottom: 2vmin;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--highlight-purple);
+  margin-bottom: 1vmin;
   text-decoration: underline;
   text-align: center;
 }
 
 .aboutsanderfigurines {
   font-size: clamp(0.7rem, 1.5vw, 1rem);
-  color: white;
+  color: var(--text-white);
   padding-bottom: 7vmin;
   text-align: center;
-  padding:2vmin ;
+  padding: 2vmin;
 }
 
 .toparticles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2vmin;
   padding: 2vmin;
+}
+
+@media (min-width: 1300px) {
+  .toparticles {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .productfigure {
@@ -100,97 +132,119 @@ h1 {
   padding: 2vmin;
 }
 
-.duck, .gorilla, .fox {
+.duck,
+.gorilla,
+.fox {
   width: 40vmin;
   height: 40vmin;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 1rem;
   margin-bottom: 1vmin;
+  max-width: 100%;
 }
-.duck{
-  background-image: url(/assets/images/transparant-swedish-duck.png);
-  background-size: cover;
-  background-repeat: no-repeat; 
-}
-.gorilla{
-  background-image: url(/assets/images/transparant-office-gorilla.png);
+
+.duck {
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-swedish-duck.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.fox{
-  background-image: url(/assets/images/transparant-fox.png);
+
+.gorilla {
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-office-gorilla.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.fox {
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-fox.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* Text Blocks */
 h3 {
   font-size: clamp(1.5rem, 2.5vw, 1.4rem);
-  color: white;
+  color: var(--text-white);
   padding-top: 2vmin;
   margin-left: 2vw;
 }
 
 .descriptionproduct {
   font-size: clamp(1rem, 1.5vw, 1rem);
-  color: white;
+  color: var(--text-white);
   text-align: center;
   max-width: 25vw;
   margin: 0.5vmin auto;
 }
 
-button, .cta-button {
+button,
+.cta-button {
   border-radius: 0.5rem;
-  background-color: #7092BE;
+  background-color: var(--main-red);
   border: none;
   padding: 1.5vmin 5vmin;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   cursor: pointer;
   margin: 3vmin auto;
   display: block;
+  width: fit-content;
   line-height: 1.2;
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+
+button:hover,
+.cta-button:hover {
+  background-color: #6a0d0f;
+}
+
 .biography {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  background-color: #7092BE;
+  background-color: var(--section-blue);
 }
 
 .portret {
-  background-image: url(/assets/images/portret-foto.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/portret-foto.png);
   background-size: cover;
-  width: clamp(28vmin, 20vmin, 20vmin);
-  height: clamp(28vmin, 20vmin, 20vmin);
+  background-position: center;
+  width: 20vmin;
+  height: 20vmin;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 2vmin;
-  box-shadow: 0 0 10px rgba(0,0,0,2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vmin; 
+  margin-bottom: 2vmin;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+  display: block;
+  overflow: hidden;
 }
 
 .biography h5 {
   font-size: clamp(1.2rem, 2.5vw, 2rem);
-  color: white;
+  color: var(--text-white);
   margin-bottom: 1vmin;
 }
 
 .biography p {
   font-size: clamp(0.6rem, 1.5vw, 1.2rem);
   line-height: 1.6;
-  color: white;
+  color: var(--text-white);
   text-align: justify;
   max-width: 60ch;
 }
 
 footer {
-  background-color: #2a4F4A;
-  color: white;
+  background-color: var(--footer-green);
+  color: var(--text-white);
   text-align: center;
   padding: 2vmin;
   font-size: clamp(0.8rem, 1.5vw, 1rem);

@@ -1,204 +1,233 @@
+:root {
+  --font-main: Arial, Helvetica, sans-serif;
+  --font-overlay: sans-serif;
+  --color-white: white;
+  --color-red: #8C1113;
+  --color-blue: #7092BE;
+  --color-purple: #4F5AFF;
+  --color-bright-red: #F21D21;
+  --color-button-text: #333;
+  --color-button-bg: #f0f0f0;
+  --color-navy: navy;
+}
+
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .pagelayout {
-     display: flex;
-      flex: 1;
-       min-height: 0;
-     font-family: Arial, Helvetica, sans-serif; 
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  font-family: var(--font-main);
 }
 
-h3,h2{
-     color: white;
-} 
+h3, h2 {
+  color: var(--color-white);
+}
 
-h3{ 
-     font-size: clamp(2rem, 10vw, 1.6rem);
-     color:white;
-     text-decoration: underline;
-     align-content: center;
-     padding-left: 1vmin; text-decoration-color: #F21D21;
-} 
+h3 {
+  font-size: clamp(2rem, 10vw, 1.6rem);
+  color: var(--color-white);
+  text-decoration: underline;
+  align-content: center;
+  padding-left: 1vmin;
+  text-decoration-color: var(--color-bright-red);
+}
 
-h2{
-     font-size: 10vmin;
-     font-style: italic;
-} 
-.astronaut p,.duck p, .fox p,.dragon p,.firemonkey p,.raindropmonkey p,.sushichef p,.turtle p,.gorilla p {
-     font-size: clamp(4rem, 10rem, 1.6rem);
-     color: white;
-     padding-top: 2vmin;
-     width: 5rem;
-     text-align: center;
+h2 {
+  font-size: 10vmin;
+  font-style: italic;
+}
+
+.astronaut p, .duck p, .fox p, .dragon p, .firemonkey p, .raindropmonkey p, .sushichef p, .turtle p, .gorilla p {
+  font-size: clamp(4rem, 10rem, 1.6rem);
+  color: var(--color-white);
+  padding-top: 2vmin;
+  width: 5rem;
+  text-align: center;
 }
 
 aside {
-     width: 5vw;
-     background-color: #7092BE;
-     padding: 2vmin;
-     box-sizing: border-box;
-     gap: 1rem;
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
+  width: 5vw;
+  background-color: var(--color-blue);
+  padding: 2vmin;
+  box-sizing: border-box;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-article{ position: relative;
-     width: 100%; aspect-ratio: 1 / 1;
+article {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
-article a{
-     display: block;
-     width: 100%;
-     height: 100%;
-     position: relative;
-} 
-    .image{
-     position:absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-size: cover;
-     background-repeat:
-     no-repeat;
-     background-position: center; z-index: 1;
+article a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.productgrid { 
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-     gap: 0vmin;
-     flex: 1;
-     justify-items: center;
-     align-items: start;
-     justify-content: flex-start;
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.productgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 0vmin;
+  flex: 1;
+  justify-items: center;
+  align-items: start;
+  justify-content: flex-start;
 }
 
 .maincontent {
-     flex: 1; 
-     display: flex;
-     flex-direction: column;
-     background-color: #4F5AFF;
-     padding: 2vmin;
-     box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-purple);
+  padding: 2vmin;
+  box-sizing: border-box;
 }
 
-aside div{
-     flex:1;
-     background-color: #7092BE;
-     padding: 1rem;
-     border-radius: 0.5rem; 
+aside div {
+  flex: 1;
+  background-color: var(--color-blue);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-.astronaut,.duck, .fox,.dragon,.firemonkey,.raindropmonkey,.sushichef,.turtle {
-     position: absolute;
-     width: clamp(80%, 20vw, 80%);
-     height: clamp(80%, 20vw, 80%);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     z-index: 1;
-     margin-top: clamp(7vmin, 5vh, 6vmin);
-     margin-left: clamp(5vmin, 10vh,10vmin);
-     padding-bottom: clamp(1vmin, 5vh, 6vmin);
+.astronaut, .duck, .fox, .dragon, .firemonkey, .raindropmonkey, .sushichef, .turtle {
+  position: absolute;
+  width: clamp(80%, 20vw, 80%);
+  height: clamp(80%, 20vw, 80%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  margin-top: clamp(7vmin, 5vh, 6vmin);
+  margin-left: clamp(5vmin, 10vh, 10vmin);
+  padding-bottom: clamp(1vmin, 5vh, 6vmin);
 }
+
 .overlay p {
-     margin-left: 10px;
-     font-size: 16px;
+  margin-left: 10px;
+  font-size: 16px;
 }
-.overlay{
-     margin: 0;
-     padding-bottom:10px;
-     width: 10rem;
-     height: 18rem;
-     font-weight: bold;
-     font-family: sans-serif;
-     font-size: 0.4rem;
-     color: white;
+
+.overlay {
+  margin: 0;
+  padding-bottom: 10px;
+  width: 10rem;
+  height: 18rem;
+  font-weight: bold;
+  font-family: var(--font-overlay);
+  font-size: 0.4rem;
+  color: var(--color-white);
 }
 
 .astronaut {
-    background-image: url(/assets/images/transparant-astronaut.png);
- }
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-astronaut.png);
+}
 
 .duck {
-     height: 50px;
-     background-image: url(/assets/images/transparant-swedish-duck.png);
- }
+  height: 50px;
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-swedish-duck.png);
+}
 
 .gorilla {
-     background-image: url(/assets/images/transparant-office-gorilla.png); 
-     position: absolute;
-     width: clamp(75%, 20vw, 75%);
-     height: clamp(75%, 20vw, 75%);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: right;
-     z-index: 1;
-     margin-top: clamp(8vmin, 5vh, 4vmin);
-     margin-right: clamp(4vmin,5vh,8vmin);
-     padding-bottom: clamp(1vmin, 5vh, 3vmin); 
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-office-gorilla.png);
+  position: absolute;
+  width: clamp(75%, 20vw, 75%);
+  height: clamp(75%, 20vw, 75%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  z-index: 1;
+  margin-top: clamp(8vmin, 5vh, 4vmin);
+  margin-right: clamp(4vmin, 5vh, 8vmin);
+  padding-bottom: clamp(1vmin, 5vh, 3vmin);
 }
+
 .dragon {
-     background-image: url(/assets/images/transparant-dragon.png);
-     }
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-dragon.png);
+}
 
 .firemonkey {
-     background-image: url(/assets/images/transparant-fire-monkey.png);
-     }
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-fire-monkey.png);
+}
 
-.raindropmonkey{
-     background-image: url(/assets/images/transparant-water-monkey.png);
+.raindropmonkey {
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-water-monkey.png);
 }
 
 .fox {
-     background-image: url(/assets/images/transparant-fox.png);
-} 
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-fox.png);
+}
 
 .sushichef {
-     background-image: url(/assets/images/transparant-sushi-chef.png); 
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-sushi-chef.png);
 }
 
 .turtle {
-     background-image: url(/assets/images/transparant-weak-turtle.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-weak-turtle.png);
 }
 
-.logo { 
-     width: 65px; height: 65px;
-     padding-left: 15px; 
+.logo {
+  width: 13vmin; 
+  height: auto;  
+  object-fit: contain; 
+  margin-right: 2vw; 
 }
+
 .navigation {
-     list-style-type: none;
-     margin: 0; padding: 0; background-color: #8C1113; display: flex; justify-content: flex-end;
-    }
-.navigation a {
-     display: block;
-     color: white;
-     text-decoration: none;
-     padding:
-     0.5rem 1rem; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: flex-end;
 }
 
-button{ 
-     border-radius: 5px; 
-     background-color: navy; 
-     color: white; 
-     padding-top: 5px; 
-     padding-bottom: 5px; 
-     padding-left: 10px; 
-     padding-right: 10px; 
-} 
+.navigation a {
+  display: block;
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
 button {
-     padding: 10px 20px;
-     font-size: 16px;
-     border: 2px solid #333;
-     background-color: #f0f0f0;
-     color: #333;
-     cursor: pointer;
-     transition: all 0.3s ease;
+  border-radius: 5px;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid var(--color-button-text);
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }

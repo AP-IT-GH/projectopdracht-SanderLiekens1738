@@ -1,78 +1,92 @@
+:root {
+  --color-white: white;
+  --color-purple: #4F5AFF;
+  --color-red: #8C1113;
+}
+
 .astronautdoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-astronaut-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-astronaut-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 400px;
   min-width: 250px;
 }
+
 .duckdoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-swedish-duck-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-swedish-duck-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   min-width: 250px;
 }
+
 .gorilladoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-office-gorilla-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-office-gorilla-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   min-width: 250px;
 }
+
 .draakdoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-dragon-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-dragon-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   min-width: 250px;
 }
+
 .flamemonkeydoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-flame-monkey-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-flame-monkey-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   min-width: 250px;
 }
+
 .raindropmonkeydoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-water-monkey-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-water-monkey-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   min-width: 250px;
 }
+
 .foxdoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-fox-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-fox-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   min-width: 250px;
 }
+
 .sushidoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-sushi-chef-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-sushi-chef-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   min-width: 250px;
 }
+
 .turtledoos {
   flex: 1 1 300px;
-  background-image: url(/assets/images/transparant-weak-turtle-box.png);
+  background-image: url(/projectopdracht-SanderLiekens1738/assets/images/transparant-weak-turtle-box.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -80,57 +94,78 @@
   min-width: 250px;
 }
 
-h1{
-    font-size: 5rem;
-    color: white;
+h1 {
+  font-size: 5rem;
+  color: var(--color-white);
 }
 
-.detailedinfo p{
-    color: white;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-bottom: 2rem;
-    text-align: center;
+.detailedinfo p {
+  color: var(--color-white);
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
-article{
-    background-color: #4F5AFF;
+article {
+  background-color: var(--color-purple);
 }
 
-h3{
-    font-size: 2rem;
-    color: white;
+h3 {
+  font-size: 2rem;
+  color: var(--color-white);
+}
 
+h4 {
+  text-align: center;
+  font-size: 1.2rem;
 }
-h4{
-    text-align: center;
-    font-size: 1.2rem;
 
+li p {
+  color: var(--color-white);
+  text-align: center;
+  margin-top: 2rem;
 }
-li p{
-    color: white;
-    text-align: center;
-    margin-top: 2rem;
-}
+
 h1, h3, h4 {
   text-align: center;
   margin: 0.5rem 0;
 }
-h4{
-    color: white;
+
+h4 {
+  color: var(--color-white);
 }
 
-.wishlistbutton{
-  display: block;
-  background-color: #8C1113;
-  color: white;
+.buy-button,
+.wishlist-button {
+  display: inline-block;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   border: none;
   border-radius: 0.3rem;
-  margin: 1rem auto 3rem auto;
+  margin: 1rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul {
   text-align: center;
 }
 
+.buy-button {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
 
+.buy-button:hover {
+  background-color: #6a0d0f;
+}
 
+.wishlist-button {
+  background-color: #7092BE;
+  color: var(--color-white);
+}
+
+.wishlist-button:hover {
+  background-color: #5a7a9e;
+}

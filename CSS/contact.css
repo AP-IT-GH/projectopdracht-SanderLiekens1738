@@ -1,0 +1,63 @@
+:root {
+    --main-red: #8C1113;
+    --main-purple: #4F5AFF;
+    --text-dark: #333;
+    --border-gray: #ccc;
+    --white: white;
+    --red-hover: #6a0d0f;
+}
+
+html{ 
+    background-color: var(--main-purple);
+}
+
+form {
+    background-color: var(--white);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid var(--main-red);
+    padding: 15px;
+}
+
+legend {
+    font-size: 1.5rem;
+    color: var(--main-red);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-gray);
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: var(--main-red);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--red-hover);
+}
