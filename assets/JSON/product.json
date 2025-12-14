@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "name": "astronaut",
+        "price": 14.95,
+        "image": "/assets/images/transparant-astronaut.png",
+        "page": "/product-astronaut.html",
+        "class": "astronaut",
+        "description": "De dromer die altijd hoger wil. Met zijn turquoise pak, oranje handschoenen en glossy vizier is hij klaar om de sterren te verkennen."
+    },
+    {
+        "id": 2,
+        "name": "swedish duck",
+        "price": 16.95,
+        "image": "/assets/images/transparant-swedish-duck.png",
+        "page": "/product-duck.html",
+        "class": "duck",
+        "description": "Klein, boos en super-Sweeds. Trots zwaaiend met de Zweedse vlag."
+    },
+    {
+        "id": 3,
+        "name": "office gorilla",
+        "price": 16.95,
+        "image": "/assets/images/transparant-office-gorilla.png",
+        "page": "/product-office-gorilla.html",
+        "class": "gorilla",
+        "description": "Deadline strijder. Koffie, tissues en energiedrankjes—de mascotte van iedereen die te lang achter een scherm zat."
+    },
+    {
+        "id": 4,
+        "name": "dragon",
+        "price": 15.95,
+        "image": "/assets/images/transparant-dragon.png",
+        "page": "/product-dragon.html",
+        "class": "dragon",
+        "description": "De dorstige draak met attitude. Groen, fel en altijd met een blikje soda in de hand."
+    },
+    {
+        "id": 5,
+        "name": "fire monkey",
+        "price": 14.95,
+        "image": "/assets/images/transparant-fire-monkey.png",
+        "page": "/product-flame-monkey.html",
+        "class": "firemonkey",
+        "description": "Zen… maar dan op een drumstick met een zwaard erdoor. Mystiek en chaotisch tegelijk."
+    },
+    {
+        "id": 6,
+        "name": "raindrop monkey",
+        "price": 13.95,
+        "image": "/assets/images/transparant-water-monkey.png",
+        "page": "/product-raindrop-monkey.html",
+        "class": "raindropmonkey",
+        "description": "Slapen onder een regenboog. Dromerig en kleurrijk, een ode aan rust."
+    },
+    {
+        "id": 7,
+        "name": "fox shopkeeper",
+        "price": 15.95,
+        "image": "/assets/images/transparant-fox.png",
+        "page": "/product-fox-shopkeeper.html",
+        "class": "fox",
+        "description": "De chagrijnige kassier die je toch wil meenemen. Sassy en hilarisch."
+    },
+    {
+        "id": 8,
+        "name": "sushi chef",
+        "price": 16.95,
+        "image": "/assets/images/transparant-sushi-chef.png",
+        "page": "/product-sushi-chef.html",
+        "class": "sushichef",
+        "description": "Snijden, zwaaien, serveren. Een vrolijke chef met een kleurrijke sushi-plank."
+    },
+    {
+        "id": 9,
+        "name": "weak turtle",
+        "price": 13.95,
+        "image": "/assets/images/transparant-weak-turtle.png",
+        "page": "/product-weak-turtle.html",
+        "class": "turtle",
+        "description": "Altijd moe, maar nooit gestopt. De ultieme underdog op zijn loopband."
+    }
+]

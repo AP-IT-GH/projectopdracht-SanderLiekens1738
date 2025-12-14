@@ -1,9 +1,7 @@
 :root {
   --font-family: Arial, Helvetica, sans-serif;
   --font-size: clamp(14px, 1.5vw, 18px);
-  --height: 100%;
-  --margin: 0;
-  --color: white;
+  --text-white: white;
   --nav-background: #8C1113;
   --footer-background: #2a4F4A;
 }
@@ -11,8 +9,8 @@
 html {
   font-family: var(--font-family);
   font-size: var(--font-size);
-  height: var(--height);
-  margin: var(--margin);
+  height: 100%;
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -32,11 +30,6 @@ body {
   object-fit: contain;
   margin-right: 1vw;
   max-width: 100%;
-}
-
-.title {
-  text-align: center;
-  font-size: clamp(1.2rem, 2vw, 2.5rem);
 }
 
 header {
@@ -66,23 +59,11 @@ header {
   display: block; 
 }
 
-.about a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.home a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.contact a {
-  color: var(--color);
-  text-decoration: none;
-}
-
+.about a,
+.home a,
+.contact a,
 .shop a {
-  color: var(--color);
+  color: var(--text-white);
   text-decoration: none;
 }
 
@@ -91,7 +72,7 @@ footer {
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--footer-background);
-  color: var(--color);
+  color: var(--text-white);
   text-align: center;
   padding: 2vmin;
   font-size: clamp(0.8rem, 1.5vw, 1rem);

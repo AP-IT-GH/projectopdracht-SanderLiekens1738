@@ -7,11 +7,13 @@
  <link rel="stylesheet" href="/CSS/general.css">
  <link rel="stylesheet" href="/CSS/reset.css">
  <link rel="stylesheet" href="/CSS/contact.css">
- <link rel="js" href="/js">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+ <script type="module" src="/js/map.js"></script>
 </head>
 <body>
  <header>
-    <img src="/assets/images/logo-blue-no-figure.png" alt="Sander's Figures logo" class="logo">
+    <a href="/home.html"><img src="/assets/images/logo-blue-no-figure.png" alt="Sander's Figures logo" class="logo"></a>
   <nav>
     <ul class="navigation">
       <li><div class="home"><a href="/home.html" >home</a></div></li>
@@ -43,14 +45,8 @@
     </form>
   </div>
 </main>
-
-
-<section>
-
-</section>  
-
  <article>
-  <img class="map" src="/assets/images/factory_map.png" alt="factory_map">
+  <div id="map"></div>
  </article>
  <footer>
   <p>© 2025 Sander Liekens. All rights reserved.</p>

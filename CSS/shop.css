@@ -8,7 +8,7 @@
   --red-hover: #6a0d0f;
 }
 
-.product-price {
+.productPrice {
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
@@ -16,37 +16,52 @@
   margin: 10px 0 5px 0;
 }
 
-.product-buttons {
+.productButtons {
   display: flex;
   gap: 10px;
   justify-content: center;
   margin-top: 10px;
 }
 
-.buy-button,
-.wishlist-button {
+.buyButton,
+.wishlistButton {
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
   font-size: 0.9rem;
   cursor: pointer;
 }
+.total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+}
 
-.buy-button {
+.totalWithBTW {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.buyButton {
   background-color: var(--main-red);
   color: var(--color-white);
 }
 
-.buy-button:hover {
+.buyButton:hover {
   background-color: var(--red-hover);
 }
 
-.wishlist-button {
+.wishlistButton {
   background-color: var(--color-blue);
   color: var(--color-white);
 }
 
-.wishlist-button:hover {
+.wishlistButton:hover {
   background-color: #5a7a9e;
 }
 
@@ -65,17 +80,54 @@ body {
   overflow-x: hidden;
 }
 
-.pagelayout {
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.item-added {
+  animation: slideIn 0.5s ease-out;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--red-hover);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  animation: slideInUp 0.3s ease-out;
+  z-index: 9999;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pageLayout {
   display: flex;
   flex: 1;
-  min-height: 0;
   background-color: var(--color-purple);
   width: 100%;
   overflow: hidden;
 }
 
 p {
-  font-size: clamp(5px, 12px, 20px);
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
 }
 
 h3, h2 {
@@ -83,12 +135,183 @@ h3, h2 {
 }
 
 h3 {
-  font-size: clamp(0.3rem, 1.6rem, 2.3rem);
+  font-size: clamp(1.2rem, 1.6vw, 1.8rem);
   color: var(--color-white);
   text-decoration: underline;
-  align-content: center;
   text-decoration-color: var(--color-decoration-red);
-  padding-left: 1vmin;
+  margin: 0;
+}
+
+aside {
+  min-width: 250px;
+  background-color: var(--main-red);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%;
+  border: none;
+}
+
+aside.showCart .shoppingCart{
+    inset: 0 auto 0 0px;
+}
+
+.shoppingCart {
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingCart h3 {
+  color: white;
+  margin: 0 0 15px 0;
+  font-weight: 300;
+}
+
+.wishlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--main-red);
+  color: white;
+  margin-bottom: 20px;
+}
+
+.wishlist h3 {
+  margin: 0;
+  font-weight: 300;
+  min-width: 120px;
+}
+
+.wishlistItems {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  color: white;
+}
+
+.wishlistItems .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background-color: var(--red-hover);
+  border-radius: 5px;
+  min-width: 120px;
+}
+
+.wishlistItems .item .photo {
+  width: 80px;
+  height: 80px;
+}
+
+.wishlistItems .item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.wishlistItems .item .wishProductName {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.wishlistItems .item .remove {
+  padding: 4px 12px;
+  font-size: 0.85em;
+  background-color: var(--color-blue);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.wishlistItems .item .remove:hover {
+  background-color: var(--color-purple);
+}
+
+.cartList {
+  flex: 1;
+  overflow-y: auto;
+  color: white;
+}
+
+.btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.kopen {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+.kopen:hover {
+  background-color: var(--color-purple);
+}
+
+.cartList .item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: var(--red-hover);
+  border-radius: 5px;
+}
+
+.cartList .item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.cartList .item .productName {
+  font-size: 0.9em;
+  grid-column: 1 / -1;
+}
+
+.cartList .item .totalPrice {
+  font-size: 0.9em;
+  grid-column: 1 / -1;
+}
+
+.cartList .quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  grid-column: 1 / -1;
+  font-size: 0.85em;
+}
+
+.cartList .quantity button {
+  padding: 2px 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.cartList .quantity button:nth-child(2) {
+  font-size: 1rem;
+}
+
+.cartList {
+  overflow: auto;
 }
 
 h2 {
@@ -104,6 +327,8 @@ article {
   padding: 1rem;
   gap: 1rem;
   position: relative;
+  border: var(--color-blue) 10px solid;
+  border-radius: 5px;
 }
 
 article a {
@@ -114,7 +339,7 @@ article a {
   gap: 1rem;
 }
 
-.productgrid {
+.productGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
@@ -126,24 +351,13 @@ article a {
   box-sizing: border-box;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-purple);
-  padding: 2vmin;
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 0;
-  overflow: hidden;
-}
-
 .overlay {
   margin: 0;
   padding-bottom: 10px;
   width: 100%;
   font-weight: bold;
   font-family: var(--font-overlay);
-  font-size: 0.4rem;
+  font-size: 0.95rem;
   color: var(--color-white);
 }
 
@@ -199,15 +413,6 @@ article a {
   background-image: url(/assets/images/transparant-weak-turtle.png);
 }
 
-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 9rem;
-  background-color: var(--color-blue);
-  padding: 1rem;
-  box-sizing: border-box;
-}
 
 .wavingman {
   background-image: url(/assets/images/transparant-zwaaiende-astronaut.png);
@@ -217,11 +422,12 @@ aside {
   width: 15vmin;
   height: 15vmin;
   position: absolute;
-  z-index: 10;
+  z-index: 1000;
   right: 0;
-  top: 0;
+  top: 10;
   animation: wavingman 1.5s ease-out forwards;
 }
+
 
 @keyframes wavingman {
   0% {
@@ -236,22 +442,62 @@ aside {
 
 
 @media (max-width: 896px) {
-  .pagelayout {
+  .pageLayout {
     flex-direction: column;
   }
 
-  aside {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-  }
 
-  .productgrid {
+  .productGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    min-width: 100%;
+  }
+
+  .shoppingCart h3,
+  .wishlist h3 {
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .cartList {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .cartList .item {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .wishlistItems {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .total, .totalWithBTW {
+    font-size: 0.85rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin: 10px 5px;
   }
 
   .wavingman {

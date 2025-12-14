@@ -32,8 +32,6 @@ main {
   box-sizing: border-box;
 }
 
-/* Logo */
-
 .logo {
   width: 7vmin;
   height: auto;
@@ -41,7 +39,6 @@ main {
   margin-right: 1vw;
 }
 
-/* Navigation */
 header {
   background-color: var(--main-red);
   display: flex;
